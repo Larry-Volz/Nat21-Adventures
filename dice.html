@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap/dist/css/bootstrap.css"> 
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+  <!-- <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com"> -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+    <title>Knight's Bank</title>
+    <!-- <html class="no-js"></html> -->
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NOTES:
+    - primary: brown 8b4513
+    - secondary: black
+    - success: green 4e7f38
+    - warning: purple 68387f
+    - danger: red 720000
+    - info: chalky blue 5bc0de
+    -->
+
+  <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
+          <a class="navbar-brand" href="index.html" id="nav-all"><img src="images/diceKnightsLogo_80x53.jpg" class ="shadow-lg"><span class="pl-2 text-secondary">Knight's Bank</span></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse main-nav-links" id="navbarNavAltMarkup">
+            <div class="navbar-nav ml-auto">
+              <ul class="navbar-nav mt-2">
+                <li>
+                  <a class="nav-item nav-link " href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link " href="campaigns.html">Campaigns</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="#">Characters</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="#">Inventory</a>
+                </li>
+                <li>
+                  <a class="nav-item nav-link" href="#">Treasure</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link active" href="dice.html">Dice</a>
+                </li>
+                <li>
+                    <a class="nav-item nav-link" href="about.html">About</a>
+                  </li>
+                <li>
+                  <span class="nav-item nav-link mx-3 hidden" id="nav-welcome">
+                    <a href="#" id="nav-user-profile"></a>
+                  </span> 
+                </li>
+                <li>
+                  <a class="nav-item nav-link mx-3 hidden" id="nav-logout" href="#">
+                    <small>(logout)</small>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav> 
+  </header>
+  <section>
+    <div class="container">
+      <div class="row justify-content-center m-4">
+        <div class="card col-10 bg-white text-light p-4">
+                    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://www.mozilla.org/firefox/new/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- STOCK: AVAILABLE DICE -->
+        <div id="stock">
+            <div class="die-stock" data-type="4"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+            <div class="die-stock" data-type="6"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+            <div class="die-stock" data-type="8"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+            <div class="die-stock" data-type="10"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+            <div class="die-stock" data-type="12"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+            <div class="die-stock" data-type="20"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+            <div class="die-stock" data-type="100"><img src="img/icon-add.png" class="icon-add" alt="+"/></div>
+
+            <div id="sound-toggle"></div>
+            <div id="help-button"></div>
+        </div>
+
+        <!-- RESULT DISPLAY: result of single or multi die rolls -->
+        <div id="total">
+            <div class="rotatable" title="Click to select all dice!">
+                <div id="total-value">?</div>
+            </div>
+            <div class="die-buttons">
+                <div class="btn-roll-selected" title="Roll all (or all selected) dice!"></div>
+                <div class="btn-remove-selected" title="Remove all (or all selected) dice from table!"></div>
+            </div>
+        </div>
+
+        <!-- TABLE: DICE SELECTED FOR GAME -->
+        <div id="table"></div>
+
+        <!-- TEMPLATES -->
+        <div id="templates">
+
+            <div class="die">
+                <div class="rotatable" title="Click to select/deselect!">
+                    <div class="die-image"></div>
+                    <div class="die-value"></div>
+                </div>
+                <div class="die-buttons">
+                    <div class="btn-roll" title="Roll this die! (If this die is selected: Roll all selected dice!)"></div>
+                    <div class="btn-remove" title="Remove this die from table!"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- HELP MODAL -->
+        <div id="help">
+            <div>
+                <img src="img/d20.png" alt=""/>
+                <br/>
+                <p><strong>dice-or-die: </strong>Well, it's a dice rolling simulation.
+                Add dice to the "table" by clicking the type of die you need
+                at the top of the page. Roll a single die by hovering over it
+                and clicking the "roll" button (circular arrow symbol). Roll
+                multiple dice by selecting all the dice you want to roll
+                (<i>click on them!</i>), then roll one of them - this will roll all
+                selected dice. See the total value in the circle above your dice.</p>
+                <br/>
+                <!-- <p>
+                    Visit at Github:
+                    <a href="https://github.com/bkis/dice-or-die"
+                    title="visit bkis/dice-or-die on GitHub"
+                    target="_blank" rel="noopener noreferrer">
+                        bkis/dice-or-die
+                    </a>
+                </p> -->
+            </div>
+        </div>
+        <!-- GH-LINK -->
+        <!-- <a id="gh-link" href="https://github.com/bkis/dice-or-die"
+        title="visit bkis/dice-or-die on GitHub"
+        target="_blank" rel="noopener noreferrer">
+            <img src="img/icon-gh.png" alt="visit bkis/dice-or-die on GitHub"/>
+        </a> -->
+        <!-- LOAD JS -->
+        <script src="index.js" async defer></script>
+      </div>
+    </div>
+  </section>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+<script src="https://unpkg.com/axios/dist/axios.js"></script>
+</body>
+
+</html>
+
+
+
