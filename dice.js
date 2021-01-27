@@ -67,7 +67,7 @@ var preLoadImages = function(imagesArray) {
 
 var total = 0;
 var currentRollId = "";
-var sound = false;
+var sound = true;
 var rollSound = document.createElement("audio");
 rollSound.src = "sounds/roll.ogg";
 rollSound.load();
