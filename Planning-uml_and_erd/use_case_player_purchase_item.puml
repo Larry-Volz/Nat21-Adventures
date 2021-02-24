@@ -1,0 +1,72 @@
+//Player instigated use cases 
+
+@startuml
+
+skinparam actorStyle awesome
+:player: as p1
+' :friend: as fr
+:admin: as dm 
+
+package IRL_bank {
+    usecase "buy zennis with $" as buyZ
+    usecase "buys items from bank" as p1_buy
+    usecase "payout to stake-holders" as moola
+}
+
+package bank_inventory {
+    usecase "give item to player" as bank_to_p1
+}
+
+package player_bank_account {
+    usecase "deposit Z's to account" as p1_act
+    usecase "friend pays player Z's" as fr_pays_p1
+
+}
+
+package player_inventory {
+    usecase "player init trade to friend" as p1_start_trade
+    usecase "gives item to friend" as p1_giveto_fr
+    usecase "recieve item" as p1_get_item
+
+}
+
+package friend_bank_account {
+    usecase "player pays/friend recieves Z's" as fr_pay
+}
+
+package friend_inventory {
+    usecase "receive item from player" as fr_item_from_p1
+    usecase "give item to player" as fr_item_to_p1
+}
+
+buyZ --> moola
+moola --> dm
+p1_buy --> bank_to_p1
+bank_to_p1 --> p1_get_item
+p1 --> buyZ
+buyZ --> p1_buy 
+buyZ --> p1_act
+p1_act --> fr_pay
+fr_pay ..> fr_item_to_p1
+fr_item_to_p1 ..> p1_get_item
+
+' p1_start_trade --> p1_giveto_fr
+' p1_giveto_fr --> fr_item_from_p1
+' fr_item_from_p1 ..> fr_item_to_p1
+' fr_item_to_p1 ..>p1_get_item
+
+' p1_act --> p1_buy
+' p1_buy --> p1_pocket
+' fr ..> fr_pays_p1
+' fr_pay ..> p1_act
+' p1 --> p1_item_to_fr
+' p1_item_to_fr --> fr_item_from_p1
+' fr ..> fr_item_to_p1
+' fr_item_to_p1 ..> p1_get_item
+' p1_act --> p1_item_to_fr
+' p1 --> fr_pay
+' fr_pay ..> fr_item_to_p1
+
+
+
+@enduml

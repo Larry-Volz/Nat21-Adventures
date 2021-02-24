@@ -1,0 +1,398 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 0,
+    "scrollLeft": 0,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "players",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 44.799999999999955,
+          "top": 69.60000000000005,
+          "zIndex": 5,
+          "widthName": 60,
+          "widthComment": 60
+        },
+        "id": "a44f43ef-72c0-e1c9-8cac-dbf3f7a17dec"
+      },
+      {
+        "name": "knights_bank_account",
+        "comment": "",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3d3549ce-8117-b102-51c3-609c7d94a9dd"
+          },
+          {
+            "name": "player_id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c6da5f9e-b9b0-e4a9-9a35-b36aee3fd01b"
+          },
+          {
+            "name": "balance",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "0",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b96b2751-02e3-7917-e9b3-48f43f0f1bce"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 483.19999999999976,
+          "top": 180.00000000000003,
+          "zIndex": 153,
+          "widthName": 132,
+          "widthComment": 60
+        },
+        "id": "a72e67bc-7981-01c0-d92a-98556a37b47b"
+      },
+      {
+        "name": "transactions",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 955.9999999999993,
+          "top": 81.59999999999991,
+          "zIndex": 75,
+          "widthName": 72,
+          "widthComment": 60
+        },
+        "id": "e4224189-4c9e-cbd4-7232-110fa1b485ce"
+      },
+      {
+        "name": "posessions",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 72.8,
+          "top": 407.99999999999994,
+          "zIndex": 54,
+          "widthName": 67,
+          "widthComment": 60
+        },
+        "id": "3a80b93f-a25d-d854-1bb2-fc6123ad340d"
+      },
+      {
+        "name": "item_types",
+        "comment": "swords, shields, flagons, etc.",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d310dc21-e526-678e-141d-14eb30b173ce"
+          },
+          {
+            "name": "description",
+            "comment": "",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8aa3859b-71f5-56da-f90c-96f3eec79f61"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 956,
+          "top": 194.3999999999999,
+          "zIndex": 101,
+          "widthName": 65,
+          "widthComment": 168
+        },
+        "id": "e76c8d73-a65d-002e-6414-5cbc1135e126"
+      },
+      {
+        "name": "IRL_account",
+        "comment": "actual account for monetary transactions",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 480,
+          "top": 82.39999999999998,
+          "zIndex": 74,
+          "widthName": 75,
+          "widthComment": 236
+        },
+        "id": "20f0b7e3-6cc8-1062-9d4a-569bdad78dc2"
+      },
+      {
+        "name": "this_user",
+        "comment": "current signed-in user",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 47.999999999999964,
+          "top": 202.40000000000018,
+          "zIndex": 107,
+          "widthName": 60,
+          "widthComment": 128
+        },
+        "id": "df1a95f8-6937-b105-55c3-9937ee28c8de"
+      },
+      {
+        "name": "payment_events",
+        "comment": "payment events between players",
+        "columns": [
+          {
+            "name": "id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "92e8810f-199f-d472-bd12-33115eb660cb"
+          },
+          {
+            "name": "paid_from_id",
+            "comment": "bank account id?",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77,
+              "widthComment": 100,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f9de0d61-051c-060f-63ed-cbbcb1a78b65"
+          },
+          {
+            "name": "paid_from_id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 77,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c976fde2-726c-3fb2-8163-a9c76fa0a269"
+          },
+          {
+            "name": "amount",
+            "comment": "",
+            "dataType": "",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c98802a7-4179-c412-9ab0-0a0430e4cde6"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 468.0000000000002,
+          "top": 319.9999999999999,
+          "zIndex": 163,
+          "widthName": 97,
+          "widthComment": 192
+        },
+        "id": "e748b1d0-d1aa-02a3-5722-00f56f8fa7b2"
+      },
+      {
+        "name": "player_inventory",
+        "comment": "",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 908.8000000000002,
+          "top": 439.20000000000016,
+          "zIndex": 161,
+          "widthName": 97,
+          "widthComment": 60
+        },
+        "id": "6281e44f-11bf-c2e9-2afe-31956766d8b4"
+      },
+      {
+        "name": "trading_events",
+        "comment": "trading events from player_inventory to player_inv",
+        "columns": [],
+        "ui": {
+          "active": false,
+          "left": 469.59999999999997,
+          "top": 533.5999999999999,
+          "zIndex": 169,
+          "widthName": 88,
+          "widthComment": 290
+        },
+        "id": "d8465bfc-488f-d60d-e48a-b4237cfb4493"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": []
+  }
+}
