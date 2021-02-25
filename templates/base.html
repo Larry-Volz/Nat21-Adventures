@@ -13,6 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
     crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/dice_style.css">
     <title>Knight's Bank</title>
 </head>
 <body>
@@ -27,7 +28,7 @@
 
   <header>
       <nav class="navbar navbar-expand-lg navbar-dark bg-primary ">
-          <a class="navbar-brand" href="index.html" id="nav-all"><img src="../static/images/d20-icon-27_60x60.png" class ="shadow-lg"><span class="pl-2 text-secondary">Knight's Bank</span></a>
+          <a class="navbar-brand" href="/" id="nav-all"><img src="../static/images/d20-icon-27_60x60.png" class ="shadow-lg"><span class="pl-2 text-secondary">Knight's Bank</span></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -35,25 +36,25 @@
             <div class="navbar-nav ml-auto">
               <ul class="navbar-nav mt-2">
                 <li>
-                  <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-item nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li>
-                  <a class="nav-item nav-link" href="campaigns.html">Campaigns</a>
+                  <a class="nav-item nav-link" href="/campaigns">Campaigns</a>
                 </li>
                 <li>
-                  <a class="nav-item nav-link" href="characters.html">Characters</a>
+                  <a class="nav-item nav-link" href="/characters">Characters</a>
                 </li>
                 <li>
-                  <a class="nav-item nav-link" href="inventory.html">Inventory</a>
+                  <a class="nav-item nav-link" href="/inventory">Inventory</a>
                 </li>
                 <li>
-                  <a class="nav-item nav-link" href="treasure.html">Treasure</a>
+                  <a class="nav-item nav-link" href="/treasure">Treasure</a>
                 </li>
                 <li>
-                  <a class="nav-item nav-link" href="dice.html">Dice</a>
+                  <a class="nav-item nav-link" href="/dice">Dice</a>
               </li>
                 <li>
-                  <a class="nav-item nav-link" href="about.html">About</a>
+                  <a class="nav-item nav-link" href="/about">About</a>
                 </li>
                 <li>
                   <span class="nav-item nav-link mx-3 hidden" id="nav-welcome">
@@ -82,22 +83,14 @@
           </h1>
           <div class="row">
             <div class="col"><hr></div>
-            <div class="col-auto"><i class="fas fa-user-shield"></i></div>
+            <div class="col-auto">{% block font_awesome %}{% endblock %}</div>
             <div class="col"><hr></div>
         </div>
           <h2>The companion app to Nat21 Adventures/Dice Knights' Gather Games</h2>
           <body>
             <div class="container">
-                <!-- <div class="row">
-                    <h1 class="display-3">Blogly</h1>
-                </div>
-                <div class="row">
-                    <p>A simple blogging app for simple programmers that's simply simple</p>
-                </div> -->
-                <div class="col-6-lg">
-                    <div class="row">
-                        <h3 class="display-4 text-black"> <a href="/users">Users</a></h3>
-                    </div>
+                <div class="col-6-lg text-secondary">
+                    
                     {% block content %}
                     {% endblock %}
                 </div>

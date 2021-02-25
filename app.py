@@ -81,3 +81,28 @@ def delete_user(user_id):
     db.session.commit()
 
     return redirect("/users")
+
+@app.route('/dice')
+def dice_page():
+    return render_template("dice.html")
+
+@app.route('/campaigns')
+def campaigns_page():
+    return render_template("campaigns.html")
+
+    
+@app.route('/characters')
+def characters_page():
+    return render_template("characters.html")
+
+@app.route('/inventory')
+def inventory_page():
+    return render_template("inventory.html")
+
+@app.route('/treasure')
+def treasure_page():
+    return render_template("treasure.html")
+
+@app.route('/about')
+def about_page():
+    return render_template("about.html")

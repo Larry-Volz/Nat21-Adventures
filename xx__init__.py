@@ -5,7 +5,7 @@ from models import db, connect_db, User
 # from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sql123@localhost:5432/blogly'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sql123@host:80/blogly'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
@@ -83,11 +83,29 @@ def delete_user(user_id):
 
     return redirect("/users")
 
+@app.route('/dice')
+def dice_page():
+    return render_template("dice.html")
 
+@app.route('/campaigns')
+def campaigns_page():
+    return render_template("campaigns.html")
 
+@app.route('/characters')
+def characters_page():
+    return render_template("characters.html")
 
+@app.route('/inventory')
+def inventory_page():
+    return render_template("inventory.html")
 
+@app.route('/treasure')
+def treasure_page():
+    return render_template("treasure.html")
 
+@app.route('/about')
+def about_page():
+    return render_template("about.html")
 
 if __name__ == "__main__":
     app.run()
