@@ -10,7 +10,7 @@
 |2-23-21|6:30pm|11:59pm|5:30|working with Verizon to get IP established. researching dynamic DNS.installing Apache, postgres, sqlalchemy, flask, python, psycgp2, dropbox.  |
 |2-24-21|12:00am|5:00am|5:00|configuring Apache & requirements. Debugging/problem-solving Apache and all files to get blog/SQL db online|
 |2-24-21|1:00pm|4:00pm|3:00|Re-configuring sqlAlchemy/Postgres to work on public server instead of development  |
-|2-25-21|1:15am|?|?|?|
+|2-25-21|1:15am|2:50am|1:35|converted all functions to python - site works locally as original proof of concept|
+|2-25-21|12:15pm|?|?|?|
 |2-25-21|?|?|?|?|
-|2-25-21|?|?|?|?|
-|===|===|Total|29:30|===|
+|===|===|Total|31:05|===|

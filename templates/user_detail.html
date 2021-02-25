@@ -1,14 +1,16 @@
 {% extends 'base.html' %}
 
-
-
+{% block font_awesome %}<i class="fas fa-dice"></i></i>{% endblock %}
 {% block content %}
-<br />
-<h1>{{ user.first_name }} {{ user.last_name }}</h1>
+<div class="row">
+    <br />
+<h1>Player Profile</h1>
+<h3>{{ user.first_name }} {{ user.last_name }}</h3>
     <img src="{{ user.img_url }}">
     <form>
         <!-- note: formaction and formmethod instead of action/method since multiple buttons being used -->
         <button class="btn btn-success" formaction="/users/{{user.id}}/edit" formmethod="GET" style="display:inline;">Edit</button>
         <button class="btn btn-danger" formaction="/users/{{user.id}}/delete" formmethod="POST" style="display:inline;">Delete</button>
     </form>
+</div>
 {% endblock %}

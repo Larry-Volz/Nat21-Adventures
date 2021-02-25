@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block font_awesome %}<i class="fab fa-pied-piper-hat" style="font-size: 1.5rem;"></i>{% endblock %}
+{% block content %}
+<div class="container">
+    <div class="row justify-content-center m-4">
+      <div class="card col-10 bg-primary text-light p-4">
+          <h2>
+            Join the Fellowship
+          </h2>
+          <form action="">
+            <input type="text" name="username" id="username" placeholder="Character Name">
+            <input type="password" name="password" id="password" placeholder="password">
+            <input type="text" name="email" id="email" placeholder="e-mail">
+          </form>
+          <div class="row">
+            <div class="col"><hr></div>
+            <div class="col-auto"><i class="fab fa-pied-piper-hat" style="font-size: 1.5rem;"></i></div>
+            <div class="col"><hr></div>
+          </div>
+          <h2>Login</h2>
+          <form action="/login">
+            <input type="text" name="username" id="username" placeholder="Character Name">
+            <input type="password" name="password" id="password" placeholder="password">
+            <button class="btn btn-info border rounded" type="submit" formaction="/login" formmethod="POST">Speak Friend & Enter</button>
+          </form>
+    </div>
+  </div>
+
+{% endblock %}

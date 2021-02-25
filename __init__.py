@@ -1,11 +1,11 @@
-"""Blogly application."""
+"""Nat21 application."""
 
 from flask import Flask, request, render_template, redirect, flash, session 
 from models import db, connect_db, User
 # from flask_debugtoolbar import DebugToolbarExtension
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sql123@host:80/blogly'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:sql123@host:80/nat21'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_ECHO'] = True
 
@@ -19,7 +19,7 @@ db.create_all()
 
 @app.route('/')
 def users_list():
-    return redirect('/users')
+    return render_template('login.html')
     
 
 @app.route('/users')

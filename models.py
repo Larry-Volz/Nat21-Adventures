@@ -1,5 +1,5 @@
 from flask_sqlalchemy import SQLAlchemy
-"""Models for Blogly."""
+"""Models for Nat21."""
 
 DEFAULT_IMG_URL = "https://th.bing.com/th/id/R75faf4f409563b6bae8d6dfc331bba8f?rik=6sPDoHS7E64M%2fw&riu=http%3a%2f%2fprofiledps.com%2fimages%2fdps%2ffull%2fitm_2012-12-22_22-46-40_3.jpg&ehk=fAdHW2putEk%2f5%2bCmhClzA%2b28uiGPMLnq9ISi0qHGW2I%3d&risl=&pid=ImgRaw"
 
@@ -10,7 +10,7 @@ def connect_db(app):
     db.init_app(app)
 
 class User(db.Model):
-    """ User/users Model for Blogly blogging application """
+    """ User/users Model for nat21 application """
     __tablename__ = 'users'
 
     def full_name(self):
@@ -38,4 +38,11 @@ class User(db.Model):
 
     img_url = db.Column(db.String(255),
     nullable = True, default = DEFAULT_IMG_URL)
+
+    email = db.Column(db.String(60),
+    nullable=False)
+
+    user_type = db.Column(db.String(30),
+    nullable=False, default="player")
+    
     
